@@ -13,5 +13,3 @@ documentación del proyecto de pago de servicios por medio de una entidad bancar
 
 [a-description]: /wiki/Pagina-1
 [vp-description]: /wiki/Pagina-1
-
-
