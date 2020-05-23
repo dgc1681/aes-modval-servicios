@@ -8,7 +8,7 @@ documentación del proyecto de pago de servicios por medio de una entidad bancar
 1. [architecture description][a-description].
 2. [viewpoint description][vp-description].
 
-[a-description]: /aes-modval-servicios/wiki/Pagina-1
-[vp-description]: /aes-modval-servicios/wiki/Pagina-1
+[a-description]: /wiki/Pagina-1
+[vp-description]: /wiki/Pagina-1
 
 
