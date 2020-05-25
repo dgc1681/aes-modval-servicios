@@ -30,6 +30,11 @@ Integrantes:
 6. [Referencias](#referencias).
 
 ## 1. Estilo de arquitectura <a name="estilo-arquitectura"></a>
+La arquitectura orientada a servicios (SOA) es un estilo arquitectónico que nos permitirá de una manera desacoplada definir funciones de negocio de una empresa, además de ello define que la comunicación entre mensajes sea un protocolo necesario para realizar un flujo de un proceso.
+El banco ABC cuenta con una problemática inicial a solucionar, la cual es la interacción con sus proveedores de servicios, este modelo de arquitectura ofrece un diseño basado en los servicios de negocio donde este podría plasmar las actividades entre la interacción de un cliente del banco y un proveedor del servicio como un componente del sistema dentro del contexto de negocio.
+Además de ello este cuenta con una seríe de beneficios que permitirán que el diseño de la arquitectura se pueda moldear a través de las implementaciones de patrones y tecnologías.
+
+
 ## 2. Patrones y herramientas <a name="patrones-herramientas"></a>
 ## 3. Arquitectrua <a name="arquitectrua"></a>
 ## 3.1 Vista de proceso <a name="vista-proceso"></a>
