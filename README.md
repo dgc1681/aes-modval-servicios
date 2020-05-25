@@ -49,40 +49,34 @@ PATRONES DE ACOMPAÑAMIENTO:
 
 3. Publicador - Suscriptor: Por el uso de coreografía en el desarrollo del proyecto, es necesario pensar que el banco actuará como Publicador (Envío de transacciones) y Suscriptor (Recepción de las respuestas), por ello la importancia del uso de este patrón ya que permite el procesamiento de transacciones. Para su aplicación se puede hacer uso de herramientas como apache camel y kafka.
 
-
 ## 3. Arquitectrua <a name="arquitectrua"></a>
 ## 3.1 Vista de proceso <a name="vista-proceso"></a>
-A continuación, se presenta en la figura 1 la vista de proceso ilustrada por un diagrama de archi en la cuál se presenta el 
-flujo del proceso para el pago de servicios por medio de los canales dispuestos por el banco. 
+A continuación, se presenta en la figura 1 la vista de proceso ilustrada por un diagrama de archi en la cual se presenta el flujo del proceso para el pago de servicios por medio de los canales dispuestos por el banco.
+ 
 ![alt text][fig1]
 
 Figura 1: Modelo de procesos
 
-En este diagrama se describe una capa de negocio, una capa de aplicaciones y servicios junto con la definición del actor Cliente
-vinculado a su rol de usuario.
+En este diagrama se describe una capa de negocio, una capa de aplicaciones y servicios junto con la definición del actor Cliente vinculado a su rol de usuario.
 
 En la capa de negocio se muestra el proceso de Gestión de pagos y exponiendo el servicio de pagos para el uso del rol usuario.
 
-En la capa de aplicaciones y servicios se dispone un servicio de aplicaciones denominado "pago de servicios" el cual contiene 
-los tres servicios para cada uno de los canales disponibles (web, móvil, cajeros). Estos servicios son expuestos por cada una 
-de las aplicaciones en su respectivo canal.
+En la capa de aplicaciones y servicios se dispone un servicio de aplicaciones denominado "pago de servicios" el cual contiene los tres servicios para cada uno de los canales disponibles (web, móvil, cajeros). Estos servicios son expuestos por cada una de las aplicaciones en su respectivo canal.
 
-Para estas aplicaciones se dispone una capacidad que sirve como intermediarios entre las peticiones que realizan las aplicaciones y
-los servicios que se componen para responder a estas peticiones.
+Para estas aplicaciones se dispone una capacidad que sirve como intermediarios entre las peticiones que realizan las aplicaciones y los servicios que se componen para responder a estas peticiones.
 
-En el último nivel se encuentran los servicios que interactúan con la capacidad de intermediación e interoperan entre ellos para 
-generar una respuesta a cada una de las aplicaciones.
+En el último nivel se encuentran los servicios que interactúan con la capacidad de intermediación e interoperan entre ellos para generar una respuesta a cada una de las aplicaciones.
 
 ## 3.2 Vista estructural <a name="vista-estructural"></a>
 Descripción del modelo
 ![alt text][fig2]
 
-Figura 2: Diagrama de compoenentes
+Figura 2: Diagrama de componentes
 
 Descripción del modelo
 ![alt text][fig3]
 
-Figura 3: Módelo entidad relación
+Figura 3: Modelo entidad relación
 
 ## 4. Justificación de arquitectura <a name="justificacion-arquitectura"></a>
 
