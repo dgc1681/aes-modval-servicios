@@ -10,14 +10,27 @@ Integrantes:
 - Juan Pablo Reyes Cárdenas
 
 ## Table of contents <a name="table-of-contents"></a>
-1. [Arquitectura](#arquitectrua)
+
+Estilo arquitectónico
+Patrones y herramienta
+Vistas de la arquitectura
+    Vista dinámica
+	Vista estática
+Justificación de la Arquitectura
+    Decisiones y problema a solucionar
+	Trade Off y Fuerzas
+Artefactos
+    Contratos de servicio
+
+1. [Estilo de arquitectura](#estilo-arquitectura).
+2. [Patrones y herramientas](#patrones-herramientas).
+3. [Arquitectura](#arquitectrua)
     1. [Vista dinamica](#vista-dinamica)
     2. [Vista estatica](#vista-estatica)
-    3. [Desciciones](#decisiones-arquitectura)
-    4. [Descripción de la descisiones](#descripcion-decisiones-arquitectura)
-2. [TradeOff](#tradeoff).
-3. [Estilo de arquitectura](#estilo-arquitectura).
-4. [Contratos](#contratos).
+4. [Justificación de arquitectura](#justificacion-arquitectura).
+    1. [Desciciones](#decisiones-arquitectura)
+    2. [TradeOff](#tradeoff).
+5. [Artefactos](#artefactos).
     1. [API Gateway](#api-gateway)
     2. [Gestion de convenios](#gestion-convenios)
     3. [Enrutador](#enrutador)
@@ -25,15 +38,17 @@ Integrantes:
     5. [Dispatcher REST](#dispatcher-rest)
     6. [Dispatcher SOAP](#dispatcher-soa)
     7. [Orquestador](#orquestador)
-5. [Referencias](#referencias).
+6. [Referencias](#referencias).
 
-## 1. Arquitectrua <a name="arquitectrua"></a>
-## 1.1 Vista dinamica <a name="vista-dinamica"></a>
+## 1. Estilo de arquitectura <a name="estilo-arquitectura"></a>
+## 2. Patrones y herramientas <a name="patrones-herramientas"></a>
+## 3. Arquitectrua <a name="arquitectrua"></a>
+## 3.1 Vista dinamica <a name="vista-dinamica"></a>
 Descripción del modelo
 ![alt text][fig1]
 
 Figura 1: Módelo de procesos
-## 1.2 Vista estatica <a name="vista-estatica"></a>
+## 3.2 Vista estatica <a name="vista-estatica"></a>
 Descripción del modelo
 ![alt text][fig2]
 
@@ -43,11 +58,12 @@ Descripción del modelo
 ![alt text][fig3]
 
 Figura 3: Módelo entidad relación
-## 1.3 Decisiones de arquitectura <a name="decisiones-arquitectura"></a>
 
-## 1.4 Descripción de decisiones de arquitectura <a name="descripcion-decisiones-arquitectura"></a> 
+## 3. Justificación de arquitectura <a name="justificacion-arquitectura"></a>
 
-## 2. TradeOff de la Arquitectura <a name="tradeoff"></a>
+## 3.1 Decisiones de arquitectura <a name="decisiones-arquitectura"></a> 
+
+## 3.2. TradeOff de la Arquitectura <a name="tradeoff"></a>
 
 | Decisión de Arquitectura | Descripción                                                                                                                                                                                                                               | Consecuencias (Contras)                                                                                                                                                                                                                 |
 |:------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -65,9 +81,7 @@ Figura 3: Módelo entidad relación
 | Publisher -Subscriber    | Al tomar la decisión de hacer uso  de coreografía en vez de orquestación, el coreógrafo actúa como publicador para enviar mensajes a los servicios de los proveedores y a su vez suscriptor para tomar las respuestas de estos servicios. | Se debe pensar en alguna tecnología que realice esto debido que el desarrollo de esta funcionalidad puede ser complejo, y no cumplir con lo esperado.                                                                                   |
 |                          | Este permitiría la agilidad de los procesos y que puedan ser asíncronos, sin estar esperando una respuesta de una solicitud para poder enviar otra.                                                                                       | El proceso de mensajería tiene proporcionar mecanismos que los consumidores puedan utilizar para suscribirse o dejar de usar de los canales disponibles.                                                                                |
 
-## 3. Estilo de arquitectura <a name="estilo-arquitectura"></a>
-
-## 4. Contratos <a name="contratos"></a>
+## 4. Artefactos <a name="artefactos"></a>
 
 ## 5. Referencias <a name="referencias"></a>
 
