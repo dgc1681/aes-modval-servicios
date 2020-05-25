@@ -1,0 +1,5 @@
+{
+  "dispatcher": "rest",
+  "payload-soap": "",
+  "payload-json": "{ 'idFactura' : 12345, 'valor': 250000, convenio : 1 }"
+}

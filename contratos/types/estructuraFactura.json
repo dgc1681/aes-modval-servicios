@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "dispatcher": { "type": "string"  },
+    "payload-soap": { "type": "string" },
+    "payload-rest": { "type": "string" }
+  }
+}

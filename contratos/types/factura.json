@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "idFactura": { "type": "integer" },
+    "valor": { "type": "number"  },
+    "convenio": { "type": "integer" }
+  }
+}

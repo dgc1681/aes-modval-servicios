@@ -1,0 +1,17 @@
+#%RAML 1.0
+title: Enrutador
+mediaType: application/json
+baseUri: http://localhost/enrutador/{version}
+version: v1
+/enrutar:
+    post:
+      description: Recibe un objeto json con que trae un campo dispatcher el cual nos indica a que función del transformador se enviara el objeto de respuesta. Esto luego de validar si el convenio con el proveedor tiende un servicio con estructura rest o a la función soap.
+      headers: 
+        application/json:          
+          example: !include examples/estructuraFacturaExample.json
+      responses:
+        200:
+          body:             
+            application/json:
+              type: !include types/estructuraFactura.json 
+              description: Retorna un objeto con tres atributos, el dispatcher que especifica el tipo de recurso que estoy enviando y dos payload, uno de los dos debe ir vació dependiendo el dispatcher, el que transporta un valor lleva un string con la estructura definida según el atributo dispatcher.

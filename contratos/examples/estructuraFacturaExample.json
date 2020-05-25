@@ -1,0 +1,6 @@
+{
+  "idFactura" : 123,  
+  "valor": 250000,
+  "dispatcher": "soap",
+  "convenio": 1,
+}

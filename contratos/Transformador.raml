@@ -1,0 +1,30 @@
+#%RAML 1.0
+title: Transformador
+mediaType: application/json
+baseUri: http://localhost/transformador/{version}
+version: v1
+
+/transformar/rest:
+    post:
+      description: Realiza una transformación con el objeto que recibió del enrutador y retorna una representación de factura como un objeto json
+      headers:       
+        application/json:
+          example: !include examples/infoFacturaExampleRest.json
+      responses:
+        200:
+          body: 
+            application/json:
+              type: !include types/factura.json
+              description: Retorna la representación en formato JSON de una factura
+/transformar/soap:
+    post:
+      description: Realiza una transformación con el objeto que recibió del enrutador y retorna una representación de factura en formato xml
+      headers:
+        application/xml:
+          example: !include /examples/infoFacturaExampleSoap.json
+      responses:
+        200:
+          body: 
+            application/xml:
+              type: !include types/factura.xsd
+              description: Retorna la representación en formato XML de una factura
