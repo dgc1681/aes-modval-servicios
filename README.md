@@ -4,33 +4,39 @@
 
 documentación del proyecto de pago de servicios por medio de una entidad bancaria.
 
-## Table of contents <a name="table-of-contents-main"></a>
-1. [Patrones][a-description].
-2. [Estilo de realización de servicios][vp-description].
-3. [TradeOff][vp-description].
-4. [Estilo de arquitectura][vp-description].
-5. [Artefactos de servicios][vp-description].
+## Table of contents <a name="table-of-contents"></a>
+1. [Arquitectura](#arquitectrua)
+    1.1. [Vista dinamica](#vista-dinamica)
+    1.2. [Vista estatica](#vista-estatica)
+    1.3. [Desciciones](#decisiones-arquitectura)
+    1.4. [Descripción de la descisiones](#descripcion-decisiones-arquitectura)
+2. [Estilo de realización de servicios][estilo-servicios].
+3. [TradeOff][tradeoff].
+4. [Estilo de arquitectura][estilo-arquitectura].
+5. [Artefactos de servicios][artefactos].
+6. [Referencias][referencias].
 
+## 1. Arquitectrua <a name="arquitectrua"></a>
+## 1.1 Vista dinamica <a name="vista-dinamica"></a>
+Descripción del modelo
 ![alt text][fig1]
 
 Figura 1: Módelo de procesos
-
+## 1.2 Vista estatica <a name="vista-estatica"></a>
+Descripción del modelo
 ![alt text][fig2]
 
 Figura 2: Diagrama de compoenentes
 
+Descripción del modelo
 ![alt text][fig3]
 
-Figura 3: Módelo entidad relación 
+Figura 3: Módelo entidad relación
+## 1.3 Decisiones de arquitectura <a name="decisiones-arquitectura"></a>
 
-[a-description]: /wiki/Pagina-1
-[vp-description]: /wiki/Pagina-1
+## 1.4 Descripción de decisiones de arquitectura <a name="descripcion-decisiones-arquitectura"></a> 
 
-[fig1]: /img/DP_Servicios.png "Módelo de procesos"
-[fig2]: /img/COMPD_Servicios.jpg "Diagrama de compoenentes"
-[fig3]: /img/mer.jpg "Módelo entidad relación"
-
-# 3. TradeOff de la Arquitectura
+## 3. TradeOff de la Arquitectura <a name="tradeoff"></a>
 | Decisión de Arquitectura | Descripción                                                                                                                                                                                                                               | Consecuencias (Contras)                                                                                                                                                                                                                 |
 |:------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Coreografía              | Debido a la necesidad de comunicación entre varios servicios, la coreografía nos permite la interacción entre varios para un objetivo común.                                                                                              | Al ser distribuido los puntos de fallos pueden ser múltiples y es difícil conocer los estados del flujo.                                                                                                                                |
@@ -46,3 +52,12 @@ Figura 3: Módelo entidad relación
 |                          | Permite una comunicación y ejecución junto con el coreógrafo, lo que permite la comunicación del flujo esperado.                                                                                                                          | Se debe agrega una lógica en el enrutador debido que además de saber a dónde ir, tiene que sabe como debe transformarlos y desde que dispatcher debe ejecutarlos.                                                                       |
 | Publisher -Subscriber    | Al tomar la decisión de hacer uso  de coreografía en vez de orquestación, el coreógrafo actúa como publicador para enviar mensajes a los servicios de los proveedores y a su vez suscriptor para tomar las respuestas de estos servicios. | Se debe pensar en alguna tecnología que realice esto debido que el desarrollo de esta funcionalidad puede ser complejo, y no cumplir con lo esperado.                                                                                   |
 |                          | Este permitiría la agilidad de los procesos y que puedan ser asíncronos, sin estar esperando una respuesta de una solicitud para poder enviar otra.                                                                                       | El proceso de mensajería tiene proporcionar mecanismos que los consumidores puedan utilizar para suscribirse o dejar de usar de los canales disponibles.                                                                                |
+
+## 6. Referencias <a name="referencias"></a>
+
+[a-description]: /wiki/Pagina-1
+[vp-description]: /wiki/Pagina-1
+
+[fig1]: /img/DP_Servicios.png "Módelo de procesos"
+[fig2]: /img/COMPD_Servicios.jpg "Diagrama de compoenentes"
+[fig3]: /img/mer.jpg "Módelo entidad relación"
