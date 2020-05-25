@@ -15,11 +15,11 @@ Integrantes:
     2. [Vista estatica](#vista-estatica)
     3. [Desciciones](#decisiones-arquitectura)
     4. [Descripción de la descisiones](#descripcion-decisiones-arquitectura)
-2. [Estilo de realización de servicios][estilo-servicios].
-3. [TradeOff][tradeoff].
-4. [Estilo de arquitectura][estilo-arquitectura].
-5. [Artefactos de servicios][artefactos].
-6. [Referencias][referencias].
+2. [Estilo de realización de servicios](#estilo-servicios).
+3. [TradeOff](#tradeoff).
+4. [Estilo de arquitectura](#estilo-arquitectura).
+5. [Artefactos de servicios](#artefactos).
+6. [Referencias](#referencias).
 
 ## 1. Arquitectrua <a name="arquitectrua"></a>
 ## 1.1 Vista dinamica <a name="vista-dinamica"></a>
