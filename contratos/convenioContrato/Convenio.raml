@@ -1,0 +1,95 @@
+#%RAML 1.0
+title: Convenio
+baseUri: http://localhost:8080/servicios/{version}
+mediaType: application/json
+version: v1
+types: 
+  Convenio: 
+    type: !include ResourceType-1.json
+  ConvenioList:
+    type: !include ListAll.json
+    
+  Factura: 
+    type: !include getByfactura.json
+
+/convenio:
+  get:
+    description: Retorna una lista de convenios inscritos en el banco
+    responses:
+      200:
+        body: 
+          schema: ConvenioList
+          example: !include convenioEx.json
+      404:
+          description: No existen registros       
+  post:
+    description: Ingresa un nuevo registro de convenio
+    body: 
+      example: !include convenioPost.json
+    responses:
+      200:
+        body:
+          application/json:
+            type: Convenio
+      400:
+          description: El registro no fue indexado
+  put:
+      description: Actualizar los detalles de un convenio por id
+      body: 
+        example: !include convenioPost.json
+      responses:
+        200:
+          body:
+            application/json:
+              type: Convenio
+              
+        404:
+          description: El Id ingresado no existe      
+  delete:
+      description: borrar un convenio por id
+      body:
+        example: 1
+      queryParameters:
+        idFactura:
+          type: integer
+      responses:
+        200:
+          description: el convenio fue borrado
+          body:
+            application/json:
+              properties:
+                idFactura: number
+                mensajeOK: string          
+        404:
+          description: El Id ingresado no existe
+          body:
+            application/json:
+              properties:
+                idFactura: number
+                mensajeBad: string
+/convenio/{id}:
+    get:
+      description: obtener los detalles de un convenio por id
+      responses:
+        200:
+          body:
+            application/json:
+              type: Convenio
+        404:
+          description: la búsqueda no arrojo resultados para el Id ingresado
+/convenio/factura:
+    get:
+      description: consultar convenio por número de factura
+      queryParameters:
+        idFactura:
+          type: integer
+      responses:
+        200:
+          body:
+            application/json:
+              type: Factura
+        404:
+          body:
+            application/json:
+              example: |
+                {"message": "Factura no encontrada"}

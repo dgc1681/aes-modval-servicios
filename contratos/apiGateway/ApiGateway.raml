@@ -1,0 +1,28 @@
+#%RAML 1.0
+title: Api Gateway
+baseUri: http://localhost:8080/{version}
+mediaType: application/json
+version: v1
+types: 
+  Factura: 
+    type: !include payByfactura.json
+protocols: [ HTTP, HTTP]
+/pago:
+    put:
+      description: Enviar id de factura para pago en sistema
+      body:
+        example: 
+          idFactura: 1
+      queryParameters:
+        idFactura:
+          type: integer
+      responses:
+        200:
+          body:
+            application/json:
+              type: Factura
+        404:
+          body:
+            application/json:
+              example: |
+                {"message": "Factura no encontrada"}

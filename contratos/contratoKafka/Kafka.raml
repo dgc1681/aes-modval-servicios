@@ -1,0 +1,138 @@
+#%RAML 1.0
+title: Api Kafka
+baseUri: http://localhost:8080/servicios/{version}
+mediaType: application/json
+version: v1
+types: 
+  Factura: 
+    type: !include factura.json
+  FacturaXml:
+    type: !include factura.xml
+  Paiyment:
+    type: !include payment.json
+
+/factura:
+  get:
+      description: obtener detalles de una factura por id
+      body:
+        example: 1
+      queryParameters:
+        idFactura:
+          type: integer
+      responses:
+        200:
+          body:
+            application/json:
+              type: Factura
+        404:
+          description: la búsqueda no arrojo resultados para el Id ingresado
+  put:
+    description: Enviar Factura al trasformador
+    body:
+            application/json:
+              type: Factura 
+    responses:
+      200:
+          description: Factura enviada
+          body:
+                   application/json:
+                     properties:
+                       idFactura: number
+                       mensajeOK: string
+      404:
+          description: No existen registros
+          body:
+                   application/json:
+                     properties:
+                       idFactura: number
+                       mensajeBad: string       
+  /trasformada/json:
+    put:
+      description: actualizar factura json Rest
+      body:
+            application/json:
+              type: Factura
+      responses:
+        200:
+          body:
+                   application/json:
+                     properties:
+                       idFactura: number
+                       mensajeOK: string
+        400:
+          body:
+            application/json:
+              example: |
+                {"message": "Factura no enviada"}
+    
+  /trasformada/xml:
+    put:
+      description: actualizar factura xml SOAP
+      body:
+            application/xml:
+              type: FacturaXml
+      responses:
+        200:
+          body:
+                   application/json:
+                     properties:
+                       idFactura: number
+                       mensajeOK: string
+        400:
+          body:
+            application/json:
+              example: |
+                {"message": "Factura no enviada"}
+  
+/payments:
+   get:
+       description: Retorna la cantidad a pagar
+       body:
+        example: 1
+       queryParameters:
+          idFactura:
+          type: integer
+       
+       responses:
+           200:
+               body:
+                  application/json:
+                    type: Paiyment
+           404:
+               description: La factura no existe
+   post:
+       description: Permite realizar el pago de la factura existente
+       body:
+          application/json:
+            type: Paiyment
+       responses:
+           200:
+               body:
+                   application/json:
+                     properties:
+                        idFactura: number
+                        mensajeOK: string
+           404:
+               body:
+                   application/json:
+                     properties:
+                       idFactura: number
+                       mensajeBad: string
+   delete:
+       description: Permite compensar el pago de la factura existente
+       body:
+         application/json:
+           type: Paiyment
+       responses:
+           200:
+               body:
+                   application/json:
+                     properties:
+                       idFactura: number
+                       mensajeOK: string
+           404:
+               body:
+                  application/json:
+                    properties:
+                      idFactura: number
+                      mensajeBad: string
