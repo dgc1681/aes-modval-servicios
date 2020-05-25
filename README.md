@@ -160,4 +160,4 @@ Figura 4: Representación del patron API Gateway, Variación Backends for fronte
 [fig1]: /img/DP_Servicios.png "Módelo de procesos"
 [fig2]: /img/COMPD_Servicios.jpg "Diagrama de compoenentes"
 [fig3]: /img/mer.jpg "Módelo entidad relación"
-[fig4]: /img/bffe.png "API Gateway" { width=10% }
+[fig4]: /img/bffe.png "API Gateway"
