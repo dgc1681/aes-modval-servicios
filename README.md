@@ -10,15 +10,12 @@ Integrantes:
 - Juan Pablo Reyes Cárdenas
 
 # Tabla de Contenidos
-1. [Patrones](#patterns)
+1. [Arquitectura](#arch)
 2. [Estilo de realización de servicios](#servicios)
 3. [TradeOff](#tradeoff)
 4. [Estilo de arquitectura](#estilo)
 5. [Artefactos de servicios](#artegactos)
 
-![alt text][fig1]
-
-Figura 1: Módelo de procesos
 
 ![alt text][fig2]
 
@@ -28,15 +25,18 @@ Figura 2: Diagrama de compoenentes
 
 Figura 3: Módelo entidad relación 
 
-[a-description]: /wiki/Pagina-1
-[vp-description]: /wiki/Pagina-1
-
-[fig1]: /img/DP_Servicios.png "Módelo de procesos"
 [fig2]: /img/COMPD_Servicios.jpg "Diagrama de compoenentes"
 [fig3]: /img/mer.jpg "Módelo entidad relación"
 
-<a name="patterns"></a>
-## Patrones
+<a name="arch"></a>
+## Arquitectura
+<p align="center" style="width: 70%">
+	![alt text][fig1]
+	Figura 1. Modelado de procesos
+</p>
+
+[fig1]: /img/DP_Servicios.png "Módelo de procesos"
+
 <a name="desc"></a>
 ## Estilo
 <a name="tradeoff"></a>
