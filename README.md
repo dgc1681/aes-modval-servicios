@@ -39,15 +39,17 @@ Para complementar el cumplimiento mediante este estilo se definió el uso de cor
 ## 2. Patrones y herramientas <a name="patrones-herramientas"></a>
 PATRÓN NUCLEAR:
 
-Intermedia Routing: Patrón utilizado para la comunicación punto a punto, este define el uso de dos enrutadores dentro de la arquitectura para transmitir mensajes a ciertos lugares dentro del flujo del software.
+SOA: Como se definió anteriormente, este patrón permitirá que todo el desarrollo se rija frente a la formación del proceso a través de la composición de los integrantes de este comunicandose de diferentes maneras, dandole valor al negocio.
 
 PATRONES DE ACOMPAÑAMIENTO:
 
-1. Api - Gateway: Dado a la definición del primer patrón, es necesario una puerta de enlace hacia las interfaces de consumo, para acceder a este servicio. Para su aplicación se puede hacer uso de herramientas que cuentan frameworks tales como Spring Cloud Gateway, AWS Api Gateway, entre otros.
+1. Intermedia Routing: Patrón utilizado para la comunicación punto a punto, este define el uso de dos enrutadores dentro de la arquitectura para transmitir mensajes a ciertos lugares dentro del flujo del software.
 
-2. Dispatcher: Debido que tenemos una comunicación con servidores que están respondiendo a peticiones, es necesario generar componentes granulares que permitan la conexión hacia ellos. Este sólo actuaría como un receptor de solicitudes y envío de mensajes hacia ellos. Estos componentes pueden tener sus funcionalidad a través de clases que realizan la comunicación entre diferentes protocolos.
+2. Api - Gateway: Dado a la definición del primer patrón, es necesario una puerta de enlace hacia las interfaces de consumo, para acceder a este servicio. Para su aplicación se puede hacer uso de herramientas que cuentan frameworks tales como Spring Cloud Gateway, AWS Api Gateway, entre otros.
 
-3. Publicador - Suscriptor: Por el uso de coreografía en el desarrollo del proyecto, es necesario pensar que el banco actuará como Publicador (Envío de transacciones) y Suscriptor (Recepción de las respuestas), por ello la importancia del uso de este patrón ya que permite el procesamiento de transacciones. Para su aplicación se puede hacer uso de herramientas como apache camel y kafka.
+3. Dispatcher: Debido que tenemos una comunicación con servidores que están respondiendo a peticiones, es necesario generar componentes granulares que permitan la conexión hacia ellos. Este sólo actuaría como un receptor de solicitudes y envío de mensajes hacia ellos. Estos componentes pueden tener sus funcionalidad a través de clases que realizan la comunicación entre diferentes protocolos.
+
+4. Publicador - Suscriptor: Por el uso de coreografía en el desarrollo del proyecto, es necesario pensar que el banco actuará como Publicador (Envío de transacciones) y Suscriptor (Recepción de las respuestas), por ello la importancia del uso de este patrón ya que permite el procesamiento de transacciones. Para su aplicación se puede hacer uso de herramientas como apache camel y kafka.
 
 ## 3. Arquitectrua <a name="arquitectrua"></a>
 ## 3.1 Vista de proceso <a name="vista-proceso"></a>
