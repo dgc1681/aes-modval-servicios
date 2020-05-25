@@ -1,0 +1,10 @@
+{ "$schema": "http://json-schema.org/draft-03/schema",
+                "type": "object",
+                "description": "convenio",
+                "properties": 
+                {
+                  "idConvenio": { "type": "integer" },
+                  "idEstado": { "type": "integer"},
+                  "idServicio": { "type": "integer"}
+                }
+              }

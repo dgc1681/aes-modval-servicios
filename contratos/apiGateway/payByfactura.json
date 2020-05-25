@@ -1,0 +1,9 @@
+{ "$schema": "http://json-schema.org/draft-03/schema",
+                "type": "integer",
+                "description": "idServicio",
+                "properties": 
+                {
+                  "id_factura": { "type": "integer" },
+                  "valor": { "type": "integer" }
+                }
+              }

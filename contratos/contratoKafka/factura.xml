@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root><$schema>http://json-schema.org/draft-03/schema
+</$schema>
+<type>object</type>
+<description>factura</description>
+<properties>
+  <id_factura>
+    <type>integer</type>
+  </id_factura>
+  <id_convenio>
+    <type>integer</type>
+  </id_convenio>
+  <valor>
+    <type>integer</type>
+  </valor>
+  <soap-rest>
+    <type>string</type>
+  </soap-rest>
+</properties>undefined</root>
