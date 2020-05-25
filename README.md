@@ -55,13 +55,14 @@ PATRONES DE ACOMPAÑAMIENTO:
 ### Herramientas
 Para una implementación a futuro del ejercicio se tomaron en cuenta ciertas herramientas que permitirían realizar lo planteado en al arquitectura.
 
-| Herramienta | Descripción                                                                                                                                                         |
-|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| RAML        | Para el desarrollo de los contratos, este ofrece una herramienta de código abierto para su diseño.                                                                  |
-| Spring Boot | El desarrollo de apis con servicios REST no lo permite hacer de manera sencilla mediante sus anotaciones. Además de ello permite hacer uso de clientes REST y SOAP. |
-| Kafka       | Debido a que su orientación mediante patrón de Publicador Suscriptor es una gran herramienta para actuar como coreógrafo del proceso.                               |
-| Zuul        | Con el fin de modelar el api-gateway, este ofrece grandes herramientas para ser la puerta de enlace para las interfaces.                                            |
-| Eureka      | Para conocer los servicios de los proveedores, este actúa como el encargado de registrar los microservicios / servicios que compone el proceso.                     |
+| Herramienta  | Descripción                                                                                                                                                                           |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| RAML         | Para el desarrollo de los contratos, este ofrece una herramienta de código abierto para su diseño.                                                                                    |
+| Spring Boot  | El desarrollo de apis con servicios REST no lo permite hacer de manera sencilla mediante sus anotaciones. Además de ello permite hacer uso de clientes REST y SOAP.                   |
+| Kafka        | Debido a que su orientación mediante patrón de Publicador Suscriptor es una gran herramienta para actuar como coreógrafo del proceso.                                                 |
+| Zuul         | Con el fin de modelar el api-gateway, este ofrece grandes herramientas para ser la puerta de enlace para las interfaces.                                                              |
+| Spring Cloud | Debido a que se debe interactuar entre varios componentes este framework ofrece funcionalidades para ambientes distribuidos como clientes de consumo sencillos hacia otros servicios. |
+| Eureka       | Para conocer los servicios de los proveedores, este actúa como el encargado de registrar los microservicios / servicios que compone el proceso.                                       |
 
 ## 3. Arquitectura <a name="arquitectrua"></a>
 ## 3.1 Vista de proceso <a name="vista-proceso"></a>
