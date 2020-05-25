@@ -81,11 +81,23 @@ Contamos con los componentes de cada uno de los canales que dispone el banco par
 
 Figura 3: Modelo entidad relación
 
-Una vez determinado esto produce un objeto json a nuevo tópico expuesto por el coreógrafo y al cual se encuentra conectado el servicio de enrutamiento. En este servicio y con la información suministrada por el servicio de gestión de convenios se determina que tipo de objeto necesito construir, si un objeto json o xml para enviarlo a un siguiente tópico el cual es escuchado por el transformador y este produjera el concepto de factura que posteriormente se enviará al dispatcher que le corresponda según la transformación que se haya aplicado.
+Una vez determinado el convenio y con esto el tipo de objeto que necesito enviar, se produce un objeto json a nuevo tópico expuesto por el coreógrafo y el cual se encuentra escuchando la respuesta del servicio de gestión de convenios. En este servicio y con la información suministrada, se determina que tipo de objeto necesito construir, si un objeto json o xml para enviarlo a un siguiente tópico el cual es escuchado por el transformador y este produjera el concepto de factura que posteriormente se enviará al dispatcher que le corresponda según la transformación que se haya aplicado.
 
 ## 4. Justificación de arquitectura <a name="justificacion-arquitectura"></a>
 
-## 4.1 Decisiones de arquitectura <a name="decisiones-arquitectura"></a> 
+## 4.1 Decisiones de arquitectura <a name="decisiones-arquitectura"></a>
+
+Basados en el diagrama de componentes, figura 2 se exponen las siguientes decisiones de arquitectura.
+
+Patrón API Gateway: Adoptar la variación del patrón Api Gateway denominada Backends for frontends por medio de la cual se define una puerta de entrada para cada cliente. Distribuyendo la responsabilidad de cada canal a un único componente.
+
+Patrón intermediate routing: Empleamos este patrón con el uso de api gateway como enrutador que conduce la petición del usuario al coreógrafo para dar inicio al proceso junto con un segundo enrutador el cual se encarga de decidir y enviar un objeto según el tipo de mensaje que se requiera manejar para cada convenio.
+
+Enrutador y transformador: Decidimos usar primero el enrutador y contar con dos opciones de producción en dos tópicos a los que escuchan dos métodos independientes del transformador, de esta forma según los atributos que reciba por parte del servicio de gestión de convenios el enrutador determinará a cuál de los dos tópicos envía un objeto json el cual lleva un payload con un string que tiene la estructura de un objeto json o de xml con los datos que se necesitan para generar en el transformador una representación de la factura la cual se emitirá al dispatcher de REST o al dispatcher de SOAP.
+
+Dispatcher independientes: Se crearon dos dispatcher, uno que recibe y envía por medio de una interfaz todos los mensajes tipo json para enviar a los convenios que manejan la estructura REST y otro que recibe y envia en su interfaz los mensajes xml y que pertenecen a los convenios que manejan mensajes tipo soap. De esta forma podemos garantizar un menor acoplamiento con el objetivo de que al momento de agregar un nuevo convenio solo con tipificarlo ya pueden ser enrutados y transformados los mensajes para que este opere.
+
+Número del convenio: El número de convenio viajará en la estructura de los mensajes que llegaban cualquiera de los dos dispatcher con el objetivo de que el dispatcher sepa a qué servicio debe realizar el pago. 
 
 ## 4.2. TradeOff de la Arquitectura <a name="tradeoff"></a>
 
