@@ -61,10 +61,10 @@ Figura 3: Módelo entidad relación
 
 ## 6. Referencias <a name="referencias"></a>
 
-1. [Service-Oriented Design (Service Contract)][soa].
-2. [SOA principles - Standarized service contract][contract].
-2. [Patron Intermediate Routing][intermediate-routing].
-2. [Patron Api Gateway][apigateway].
+1. [Service-Oriented Design (Service Contract)][soa] {:target="_blank"}
+2. [SOA principles - Standarized service contract][contract] {:target="_blank"}
+3. [Patron Intermediate Routing][intermediate-routing] {:target="_blank"}
+4. [Patron Api Gateway][apigateway] {:target="_blank"}
 
 [contract]: https://es.slideshare.net/MohamedZakarya2/soa-principles-1-standarized-service-contract
 [intermediate-routing]: https://patterns.arcitura.com/soa-patterns/design_patterns/intermediate_routing
