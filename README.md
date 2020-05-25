@@ -2,9 +2,14 @@
 
 ## Descripción
 
-documentación del proyecto de pago de servicios por medio de una entidad bancaria.
+Este repositorio tiene como fin documentar el proyecto de pago de servicios por medio de una entidad bancaria, aquí se encontrará la definición de la arquitectura propuesta para el ejercicio de la asignatura Modelado y Validación de Arquitectura de la especialización Arquitectura Empresarial de Software.
 
-# Table of contents
+Integrantes:
+- Johan Miguel Céspedes Ortega
+- Diego Armando Gomez Cuervo 
+- Juan Pablo Reyes Cárdenas
+
+# Tabla de Contenidos
 1. [Patrones](#patterns)
 2. [Estilo de realización de servicios](#servicios)
 3. [TradeOff](#tradeoff)
