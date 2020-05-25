@@ -41,7 +41,6 @@ Figura 3: Módelo entidad relación
 
 ## 1.4 Descripción de decisiones de arquitectura <a name="descripcion-decisiones-arquitectura"></a> 
 
-
 ## 3. TradeOff de la Arquitectura <a name="tradeoff"></a>
 
 | Decisión de Arquitectura | Descripción                                                                                                                                                                                                                               | Consecuencias (Contras)                                                                                                                                                                                                                 |
