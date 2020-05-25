@@ -68,15 +68,20 @@ Para estas aplicaciones se dispone una capacidad que sirve como intermediarios e
 En el último nivel se encuentran los servicios que interactúan con la capacidad de intermediación e interoperan entre ellos para generar una respuesta a cada una de las aplicaciones.
 
 ## 3.2 Vista estructural <a name="vista-estructural"></a>
-Descripción del modelo
+
+La vista estructural se presenta por medio del diagrama de componentes. En este diagrama podemos describir algunos de los principales patrones y decisiones arquitectónicas que se tomaron, decisiones que explicaremos en la siguiente sección.
+
 ![alt text][fig2]
 
 Figura 2: Diagrama de componentes
 
-Descripción del modelo
+Contamos con los componentes de cada uno de los canales que dispone el banco para que sus clientes realicen el pago de servicios. Cada una de los canales se conecta con su propio api gateway, las peticiones que ingresan por los api gateway y que llevarán el código de factura se conectan a una interface (tópico) expuesta por el orquestador y a la cual está conectado y escuchando el servicio de gestión de convenios, este servicio se encarga de aplicar la lógica necesaria (basada en el modelo de datos de la figura 3) para determinar el convenio a la que pertenece esta factura.
+
 ![alt text][fig3]
 
 Figura 3: Modelo entidad relación
+
+Una vez determinado esto produce un objeto json a nuevo tópico expuesto por el coreógrafo y al cual se encuentra conectado el servicio de enrutamiento. En este servicio y con la información suministrada por el servicio de gestión de convenios se determina que tipo de objeto necesito construir, si un objeto json o xml para enviarlo a un siguiente tópico el cual es escuchado por el transformador y este produjera el concepto de factura que posteriormente se enviará al dispatcher que le corresponda según la transformación que se haya aplicado.
 
 ## 4. Justificación de arquitectura <a name="justificacion-arquitectura"></a>
 
