@@ -1,8 +1,13 @@
 # Justificación de arquitectura Banco ABC
 
-## Description
+## Descripción
 
-documentación del proyecto de pago de servicios por medio de una entidad bancaria.
+Este repositorio tiene como fin documentar el proyecto de pago de servicios por medio de una entidad bancaria, aquí se encontrará la definición de la arquitectura propuesta para el ejercicio de la asignatura Modelado y Validación de Arquitectura de la especialización Arquitectura Empresarial de Software.
+
+Integrantes:
+- Johan Miguel Céspedes Ortega
+- Diego Armando Gomez Cuervo 
+- Juan Pablo Reyes Cárdenas
 
 ## Table of contents <a name="table-of-contents"></a>
 1. [Arquitectura](#arquitectrua)
@@ -36,7 +41,9 @@ Figura 3: Módelo entidad relación
 
 ## 1.4 Descripción de decisiones de arquitectura <a name="descripcion-decisiones-arquitectura"></a> 
 
+
 ## 3. TradeOff de la Arquitectura <a name="tradeoff"></a>
+
 | Decisión de Arquitectura | Descripción                                                                                                                                                                                                                               | Consecuencias (Contras)                                                                                                                                                                                                                 |
 |:------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Coreografía              | Debido a la necesidad de comunicación entre varios servicios, la coreografía nos permite la interacción entre varios para un objetivo común.                                                                                              | Al ser distribuido los puntos de fallos pueden ser múltiples y es difícil conocer los estados del flujo.                                                                                                                                |
