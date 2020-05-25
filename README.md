@@ -15,11 +15,17 @@ Integrantes:
     2. [Vista estatica](#vista-estatica)
     3. [Desciciones](#decisiones-arquitectura)
     4. [Descripción de la descisiones](#descripcion-decisiones-arquitectura)
-2. [Estilo de realización de servicios](#estilo-servicios).
-3. [TradeOff](#tradeoff).
-4. [Estilo de arquitectura](#estilo-arquitectura).
-5. [Artefactos de servicios](#artefactos).
-6. [Referencias](#referencias).
+2. [TradeOff](#tradeoff).
+3. [Estilo de arquitectura](#estilo-arquitectura).
+4. [Contratos](#contratos).
+    1. [API Gateway](#api-gateway)
+    2. [Gestion de convenios](#gestion-convenios)
+    3. [Enrutador](#enrutador)
+    4. [Transformador](#transformador)
+    5. [Dispatcher REST](#dispatcher-rest)
+    6. [Dispatcher SOAP](#dispatcher-soa)
+    7. [Orquestador](#orquestador)
+5. [Referencias](#referencias).
 
 ## 1. Arquitectrua <a name="arquitectrua"></a>
 ## 1.1 Vista dinamica <a name="vista-dinamica"></a>
@@ -41,7 +47,7 @@ Figura 3: Módelo entidad relación
 
 ## 1.4 Descripción de decisiones de arquitectura <a name="descripcion-decisiones-arquitectura"></a> 
 
-## 3. TradeOff de la Arquitectura <a name="tradeoff"></a>
+## 2. TradeOff de la Arquitectura <a name="tradeoff"></a>
 
 | Decisión de Arquitectura | Descripción                                                                                                                                                                                                                               | Consecuencias (Contras)                                                                                                                                                                                                                 |
 |:------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -59,7 +65,11 @@ Figura 3: Módelo entidad relación
 | Publisher -Subscriber    | Al tomar la decisión de hacer uso  de coreografía en vez de orquestación, el coreógrafo actúa como publicador para enviar mensajes a los servicios de los proveedores y a su vez suscriptor para tomar las respuestas de estos servicios. | Se debe pensar en alguna tecnología que realice esto debido que el desarrollo de esta funcionalidad puede ser complejo, y no cumplir con lo esperado.                                                                                   |
 |                          | Este permitiría la agilidad de los procesos y que puedan ser asíncronos, sin estar esperando una respuesta de una solicitud para poder enviar otra.                                                                                       | El proceso de mensajería tiene proporcionar mecanismos que los consumidores puedan utilizar para suscribirse o dejar de usar de los canales disponibles.                                                                                |
 
-## 6. Referencias <a name="referencias"></a>
+## 3. Estilo de arquitectura <a name="estilo-arquitectura"></a>
+
+## 4. Contratos <a name="contratos"></a>
+
+## 5. Referencias <a name="referencias"></a>
 
 1. [Service-Oriented Design (Service Contract)][soa]
 2. [SOA principles - Standarized service contract][contract]
