@@ -11,17 +11,6 @@ Integrantes:
 
 ## Table of contents <a name="table-of-contents"></a>
 
-Estilo arquitectónico
-Patrones y herramienta
-Vistas de la arquitectura
-    Vista dinámica
-	Vista estática
-Justificación de la Arquitectura
-    Decisiones y problema a solucionar
-	Trade Off y Fuerzas
-Artefactos
-    Contratos de servicio
-
 1. [Estilo de arquitectura](#estilo-arquitectura).
 2. [Patrones y herramientas](#patrones-herramientas).
 3. [Arquitectura](#arquitectrua)
@@ -59,11 +48,11 @@ Descripción del modelo
 
 Figura 3: Módelo entidad relación
 
-## 3. Justificación de arquitectura <a name="justificacion-arquitectura"></a>
+## 4. Justificación de arquitectura <a name="justificacion-arquitectura"></a>
 
-## 3.1 Decisiones de arquitectura <a name="decisiones-arquitectura"></a> 
+## 4.1 Decisiones de arquitectura <a name="decisiones-arquitectura"></a> 
 
-## 3.2. TradeOff de la Arquitectura <a name="tradeoff"></a>
+## 4.2. TradeOff de la Arquitectura <a name="tradeoff"></a>
 
 | Decisión de Arquitectura | Descripción                                                                                                                                                                                                                               | Consecuencias (Contras)                                                                                                                                                                                                                 |
 |:------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -81,14 +70,30 @@ Figura 3: Módelo entidad relación
 | Publisher -Subscriber    | Al tomar la decisión de hacer uso  de coreografía en vez de orquestación, el coreógrafo actúa como publicador para enviar mensajes a los servicios de los proveedores y a su vez suscriptor para tomar las respuestas de estos servicios. | Se debe pensar en alguna tecnología que realice esto debido que el desarrollo de esta funcionalidad puede ser complejo, y no cumplir con lo esperado.                                                                                   |
 |                          | Este permitiría la agilidad de los procesos y que puedan ser asíncronos, sin estar esperando una respuesta de una solicitud para poder enviar otra.                                                                                       | El proceso de mensajería tiene proporcionar mecanismos que los consumidores puedan utilizar para suscribirse o dejar de usar de los canales disponibles.                                                                                |
 
-## 4. Artefactos <a name="artefactos"></a>
+## 5. Artefactos <a name="artefactos"></a>
 
-## 5. Referencias <a name="referencias"></a>
+1. [API Gateway][contrato-apigateway]
+2. [Gestión de convenios][contrato-gestion]
+3. [Enrutador][contrato-enrutador]
+4. [Transformador][contrato-transformador]
+5. [Dispatcher REST][contrato-dispatcher-rest]
+6. [Dispatcher SOAP][contrato-dispatcher-soap]
+7. [Orquestador][contrato-orquestador]
+
+## 6. Referencias <a name="referencias"></a>
 
 1. [Service-Oriented Design (Service Contract)][soa]
 2. [SOA principles - Standarized service contract][contract]
 3. [Patron Intermediate Routing][intermediate-routing]
 4. [Patron Api Gateway][apigateway]
+
+[contrato-apigateway]: contratos/apiGateway/ApiGateway.raml
+[contrato-gestion]: contratos/convenioContrato/Convenio.raml
+[contrato-enrutador]: contratos/Enrutador.raml
+[contrato-transformador]: contratos/Transformador.raml
+[contrato-dispatcher-rest]: contratos/Enrutador.raml
+[contrato-dispatcher-soap]: contratos/Enrutador.raml
+[contrato-orquestador]: contratos/contratoKafka/Kafka.raml
 
 [contract]: https://es.slideshare.net/MohamedZakarya2/soa-principles-1-standarized-service-contract
 [intermediate-routing]: https://patterns.arcitura.com/soa-patterns/design_patterns/intermediate_routing
