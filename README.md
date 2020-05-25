@@ -101,7 +101,7 @@ Número del convenio: El número de convenio viajará en la estructura de los me
 
 Coreografía: Se seleccionó un esquema de coreografía para la composición de servicios por encima de orquestación, esto por que consideramos que para la composición de los servicios propuestos no se requiere operar bajo un esquema de comunicación  síncrona ya que no consideramos necesario que el usuario obtenga la respuesta inmediata del éxito de la transacción, sino que puede emitir un mensaje de transacción recibida y posteriormente notificar cuando la transacción se haya finalizado. de esta forma generamos una mejor experiencia de usuario basándonos en el atributo de calidad de disponibilidad.
 
-![alt text][fig4]{ width=10% }
+![alt text][fig4]
 
 Figura 4: Representación del patron API Gateway, Variación Backends for frontends
 
@@ -160,4 +160,4 @@ Figura 4: Representación del patron API Gateway, Variación Backends for fronte
 [fig1]: /img/DP_Servicios.png "Módelo de procesos"
 [fig2]: /img/COMPD_Servicios.jpg "Diagrama de compoenentes"
 [fig3]: /img/mer.jpg "Módelo entidad relación"
-[fig4]: /img/bffe.png "API Gateway"
+[fig4]: /img/bffe.png "API Gateway" { width=10% }
