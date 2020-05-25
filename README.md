@@ -6,7 +6,7 @@ Este repositorio tiene como fin documentar el proyecto de pago de servicios por 
 
 Integrantes:
 - Johan Miguel Céspedes Ortega
-- Diego Armando Gomez Cuervo 
+- Diego Armando Gómez Cuervo 
 - Juan Pablo Reyes Cárdenas
 
 ## Tabla de contenido <a name="table-of-contents"></a>
@@ -33,10 +33,27 @@ Integrantes:
 ## 2. Patrones y herramientas <a name="patrones-herramientas"></a>
 ## 3. Arquitectrua <a name="arquitectrua"></a>
 ## 3.1 Vista de proceso <a name="vista-proceso"></a>
-A continuación, se presenta el dia
+A continuación, se presenta en la figura 1 la vista de proceso ilustrada por un diagrama de archi en la cuál se presenta el 
+flujo del proceso para el pago de servicios por medio de los canales dispuestos por el banco. 
 ![alt text][fig1]
 
-Figura 1: Módelo de procesos
+Figura 1: Modelo de procesos
+
+En este diagrama se describe una capa de negocio, una capa de aplicaciones y servicios junto con la definición del actor Cliente
+vinculado a su rol de usuario.
+
+En la capa de negocio se muestra el proceso de Gestión de pagos y exponiendo el servicio de pagos para el uso del rol usuario.
+
+En la capa de aplicaciones y servicios se dispone un servicio de aplicaciones denominado "pago de servicios" el cual contiene 
+los tres servicios para cada uno de los canales disponibles (web, móvil, cajeros). Estos servicios son expuestos por cada una 
+de las aplicaciones en su respectivo canal.
+
+Para estas aplicaciones se dispone una capacidad que sirve como intermediarios entre las peticiones que realizan las aplicaciones y
+los servicios que se componen para responder a estas peticiones.
+
+En el último nivel se encuentran los servicios que interactúan con la capacidad de intermediación e interoperan entre ellos para 
+generar una respuesta a cada una de las aplicaciones.
+
 ## 3.2 Vista estructural <a name="vista-estructural"></a>
 Descripción del modelo
 ![alt text][fig2]
