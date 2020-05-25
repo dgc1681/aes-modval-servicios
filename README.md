@@ -97,7 +97,9 @@ Enrutador y transformador: Decidimos usar primero el enrutador y contar con dos 
 
 Dispatcher independientes: Se crearon dos dispatcher, uno que recibe y envía por medio de una interfaz todos los mensajes tipo json para enviar a los convenios que manejan la estructura REST y otro que recibe y envia en su interfaz los mensajes xml y que pertenecen a los convenios que manejan mensajes tipo soap. De esta forma podemos garantizar un menor acoplamiento con el objetivo de que al momento de agregar un nuevo convenio solo con tipificarlo ya pueden ser enrutados y transformados los mensajes para que este opere.
 
-Número del convenio: El número de convenio viajará en la estructura de los mensajes que llegaban cualquiera de los dos dispatcher con el objetivo de que el dispatcher sepa a qué servicio debe realizar el pago. 
+Número del convenio: El número de convenio viajará en la estructura de los mensajes que llegaban cualquiera de los dos dispatcher con el objetivo de que el dispatcher sepa a qué servicio debe realizar el pago.
+
+Coreografía: Se seleccionó un esquema de coreografía para la composición de servicios por encima de orquestación, esto por que consideramos que para la composición de los servicios propuestos no se requiere operar bajo un esquema de comunicación  síncrona ya que no consideramos necesario que el usuario obtenga la respuesta inmediata del éxito de la transacción, sino que puede emitir un mensaje de transacción recibida y posteriormente notificar cuando la transacción se haya finalizado. de esta forma generamos una mejor experiencia de usuario basándonos en el atributo de calidad de disponibilidad. 
 
 ## 4.2. TradeOff de la Arquitectura <a name="tradeoff"></a>
 
