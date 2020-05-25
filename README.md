@@ -30,7 +30,26 @@ Integrantes:
 6. [Referencias](#referencias).
 
 ## 1. Estilo de arquitectura <a name="estilo-arquitectura"></a>
+La arquitectura orientada a servicios (SOA) es un estilo arquitectónico que nos permite de una manera desacoplada definir funciones de negocio de una empresa, además de ello define que la comunicación entre mensajes sea un protocolo necesario para realizar un flujo de un proceso. <br/>
+Por ello, este modelo ayudará a resolver la problemática del banco ABC la cual es la interacción con sus proveedores de servicios, ofreciendo un diseño basado en los servicios de negocio plasmando las actividades de interacción entre un cliente del banco y un proveedor del servicio como un componente del sistema dentro del contexto de negocio.
+Además de ello este cuenta con una seríe de beneficios que permitirán que el diseño de la arquitectura se pueda moldear a través de las implementaciones de patrones y tecnologías. <br/>
+Para complementar el cumplimiento mediante este estilo se definió el uso de coreografía por encima de orquestación, debido a la cantidad de solicitudes por procesar y a la respuesta de los proveedores.
+
+
 ## 2. Patrones y herramientas <a name="patrones-herramientas"></a>
+PATRÓN NUCLEAR:
+
+Intermedia Routing: Patrón utilizado para la comunicación punto a punto, este define el uso de dos enrutadores dentro de la arquitectura para transmitir mensajes a ciertos lugares dentro del flujo del software.
+
+PATRONES DE ACOMPAÑAMIENTO:
+
+1. Api - Gateway: Dado a la definición del primer patrón, es necesario una puerta de enlace hacia las interfaces de consumo, para acceder a este servicio. Para su aplicación se puede hacer uso de herramientas que cuentan frameworks tales como Spring Cloud Gateway, AWS Api Gateway, entre otros.
+
+2. Dispatcher: Debido que tenemos una comunicación con servidores que están respondiendo a peticiones, es necesario generar componentes granulares que permitan la conexión hacia ellos. Este sólo actuaría como un receptor de solicitudes y envío de mensajes hacia ellos. Estos componentes pueden tener sus funcionalidad a través de clases que realizan la comunicación entre diferentes protocolos.
+
+3. Publicador - Suscriptor: Por el uso de coreografía en el desarrollo del proyecto, es necesario pensar que el banco actuará como Publicador (Envío de transacciones) y Suscriptor (Recepción de las respuestas), por ello la importancia del uso de este patrón ya que permite el procesamiento de transacciones. Para su aplicación se puede hacer uso de herramientas como apache camel y kafka.
+
+
 ## 3. Arquitectrua <a name="arquitectrua"></a>
 ## 3.1 Vista de proceso <a name="vista-proceso"></a>
 A continuación, se presenta en la figura 1 la vista de proceso ilustrada por un diagrama de archi en la cuál se presenta el 
@@ -71,7 +90,7 @@ Figura 3: Módelo entidad relación
 
 ## 4.2. TradeOff de la Arquitectura <a name="tradeoff"></a>
 
-| Decisión de Arquitectura | Descripción                                                                                                                                                                                                                               | Consecuencias (Contras)                                                                                                                                                                                                                 |
+| Decisión de Arquitectura | Fuerzas (Descripción)                                                                                                                                                                                                                               | Consecuencias (Contras)                                                                                                                                                                                                                 |
 |:------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Coreografía              | Debido a la necesidad de comunicación entre varios servicios, la coreografía nos permite la interacción entre varios para un objetivo común.                                                                                              | Al ser distribuido los puntos de fallos pueden ser múltiples y es difícil conocer los estados del flujo.                                                                                                                                |
 |                          | Permite desacoplar las peticiones de los servicios de los proveedores, el coreógrafo puede enviar peticiones asíncronas a diferentes servicios.                                                                                           | Al trabajar de manera asincrónica, tiene que contar con los recursos totalmente suficientes para ir enrutando mensajes y dejar servicios en cola en caso de ser necesario.                                                              |
