@@ -38,7 +38,7 @@ Para complementar el cumplimiento mediante este estilo se definió el uso de cor
 
 ## 2. Patrones y herramientas <a name="patrones-herramientas"></a>
 
-# Patrones
+### Patrones
 PATRÓN NUCLEAR:
 
 SOA: Como se definió anteriormente, este patrón permitirá que todo el desarrollo se rija frente a la formación del proceso a través de la composición de los integrantes de este comunicandose de diferentes maneras, dandole valor al negocio.
@@ -52,7 +52,7 @@ PATRONES DE ACOMPAÑAMIENTO:
 | SAGA                    | Debido que el sistema del banco se comporta como una secuencia de transacciones, este patron describe la definición como un sistema desde una primera transacción desde una solicitud externa, y el paso para para completar la solicitud. Esta funcionalidad de complementa con intermedia routing y da como fin la implementación de la coreografía.                                      | <img src="https://chrisrichardson.net/i/sagas/From_2PC_To_Saga.png" width="600">                                                                                           |
 | Publicador - Suscriptor | Por el uso de coreografía en el desarrollo del proyecto, es necesario pensar que el banco actuará como Publicador (Envío de transacciones) y Suscriptor (Recepción de las respuestas), por ello la importancia del uso de este patrón ya que permite el procesamiento de transacciones. Para su aplicación se puede hacer uso de herramientas como apache camel y kafka.                    | <img src="https://realtimeapi.io/wp-content/uploads/2017/09/pubsub-1.png" width="600">                                                                                     |
 
-# Herramientas
+### Herramientas
 Para una implementación a futuro del ejercicio se tomaron en cuenta ciertas herramientas que permitirían realizar lo planteado en al arquitectura.
 
 | Herramienta | Descripción                                                                                                                                                         |
