@@ -49,7 +49,9 @@ PATRONES DE ACOMPAÑAMIENTO:
 
 3. Dispatcher: Debido que tenemos una comunicación con servidores que están respondiendo a peticiones, es necesario generar componentes granulares que permitan la conexión hacia ellos. Este sólo actuaría como un receptor de solicitudes y envío de mensajes hacia ellos. Estos componentes pueden tener sus funcionalidad a través de clases que realizan la comunicación entre diferentes protocolos.
 
-4. Publicador - Suscriptor: Por el uso de coreografía en el desarrollo del proyecto, es necesario pensar que el banco actuará como Publicador (Envío de transacciones) y Suscriptor (Recepción de las respuestas), por ello la importancia del uso de este patrón ya que permite el procesamiento de transacciones. Para su aplicación se puede hacer uso de herramientas como apache camel y kafka.
+4. SAGA: Debido que el sistema del banco se comporta como una secuencia de transacciones, este patron decscribre la definición como un sistema desde una primera transacción desde una solicitud externa, y el paso para para completar la solicitud. Esta funcionalidad de complementa con intermedia routing y da como fin la implementación de la coreografía.
+
+5. Publicador - Suscriptor: Por el uso de coreografía en el desarrollo del proyecto, es necesario pensar que el banco actuará como Publicador (Envío de transacciones) y Suscriptor (Recepción de las respuestas), por ello la importancia del uso de este patrón ya que permite el procesamiento de transacciones. Para su aplicación se puede hacer uso de herramientas como apache camel y kafka.
 
 ## 3. Arquitectrua <a name="arquitectrua"></a>
 ## 3.1 Vista de proceso <a name="vista-proceso"></a>
