@@ -135,6 +135,8 @@ Coreografía: Se seleccionó un esquema de coreografía para la composición de 
 2. [SOA principles - Standarized service contract][contract]
 3. [Patron Intermediate Routing][intermediate-routing]
 4. [Patron Api Gateway][apigateway]
+5. [Publish-subscribe messaging system][publish-subscribe]
+6. [Event-driven architecture (Saga)][saga]
 
 [contrato-apigateway]: contratos/apiGateway/ApiGateway.raml
 [contrato-gestion]: contratos/convenioContrato/Convenio.raml
@@ -148,6 +150,8 @@ Coreografía: Se seleccionó un esquema de coreografía para la composición de 
 [intermediate-routing]: https://patterns.arcitura.com/soa-patterns/design_patterns/intermediate_routing
 [apigateway]: https://microservices.io/patterns/apigateway.html
 [soa]: https://patterns.arcitura.com/soa-patterns/basics/soaproject/serviceorienteddesign
+[publish-subscribe]: https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781787283985/1/01lvl1sec5/publish-subscribe-messaging-system
+[saga]: https://microservices.io/patterns/data/saga.html
 
 [fig1]: /img/DP_Servicios.png "Módelo de procesos"
 [fig2]: /img/COMPD_Servicios.jpg "Diagrama de compoenentes"
