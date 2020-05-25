@@ -7,7 +7,7 @@ documentación del proyecto de pago de servicios por medio de una entidad bancar
 ## Table of contents <a name="table-of-contents-main"></a>
 1. [Patrones][a-description].
 2. [Estilo de realización de servicios][vp-description].
-3. [TradeOff][vp-description].
+3. [TradeOff] (#tradeoff).
 4. [Estilo de arquitectura][vp-description].
 5. [Artefactos de servicios][vp-description].
 
@@ -30,7 +30,7 @@ Figura 3: Módelo entidad relación
 [fig2]: /img/COMPD_Servicios.jpg "Diagrama de compoenentes"
 [fig3]: /img/mer.jpg "Módelo entidad relación"
 
-# 3. TradeOff de la Arquitectura
+# TradeOff
 | Decisión de Arquitectura | Descripción                                                                                                                                                                                                                               | Consecuencias (Contras)                                                                                                                                                                                                                 |
 |:------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Coreografía              | Debido a la necesidad de comunicación entre varios servicios, la coreografía nos permite la interacción entre varios para un objetivo común.                                                                                              | Al ser distribuido los puntos de fallos pueden ser múltiples y es difícil conocer los estados del flujo.                                                                                                                                |
