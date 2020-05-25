@@ -7,7 +7,7 @@ documentación del proyecto de pago de servicios por medio de una entidad bancar
 # Table of contents
 1. [Patrones](#patterns)
 2. [Estilo de realización de servicios](#servicios)
-3. [TradeOff] (#tradeoff)
+3. [TradeOff](#tradeoff)
 4. [Estilo de arquitectura](#estilo)
 5. [Artefactos de servicios](#artegactos)
 
@@ -36,9 +36,6 @@ Figura 3: Módelo entidad relación
 ## Estilo
 <a name="tradeoff"></a>
 ## TradeOff
-
-
-# TradeOff
 | Decisión de Arquitectura | Descripción                                                                                                                                                                                                                               | Consecuencias (Contras)                                                                                                                                                                                                                 |
 |:------------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Coreografía              | Debido a la necesidad de comunicación entre varios servicios, la coreografía nos permite la interacción entre varios para un objetivo común.                                                                                              | Al ser distribuido los puntos de fallos pueden ser múltiples y es difícil conocer los estados del flujo.                                                                                                                                |
