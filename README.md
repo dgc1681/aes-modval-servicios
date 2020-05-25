@@ -61,8 +61,15 @@ Figura 3: Módelo entidad relación
 
 ## 6. Referencias <a name="referencias"></a>
 
-[a-description]: /wiki/Pagina-1
-[vp-description]: /wiki/Pagina-1
+1. [Service-Oriented Design (Service Contract)][soa].
+2. [SOA principles - Standarized service contract][contract].
+2. [Patron Intermediate Routing][intermediate-routing].
+2. [Patron Api Gateway][apigateway].
+
+[contract]: https://es.slideshare.net/MohamedZakarya2/soa-principles-1-standarized-service-contract
+[intermediate-routing]: https://patterns.arcitura.com/soa-patterns/design_patterns/intermediate_routing
+[apigateway]: https://microservices.io/patterns/apigateway.html
+[soa]: https://patterns.arcitura.com/soa-patterns/basics/soaproject/serviceorienteddesign
 
 [fig1]: /img/DP_Servicios.png "Módelo de procesos"
 [fig2]: /img/COMPD_Servicios.jpg "Diagrama de compoenentes"
