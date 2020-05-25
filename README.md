@@ -30,8 +30,11 @@ Figura 3: Módelo entidad relación
 
 <a name="arch"></a>
 ## Arquitectura
+
+Para abordar el ejercicio ...
 <p align="center" style="width: 70%">
 	<img align="center" width="500" src="/img/DP_Servicios.png">
+	<br />
 	Figura 1. Modelado de procesos
 </p>
 
