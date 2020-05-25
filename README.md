@@ -11,10 +11,10 @@ Integrantes:
 
 ## Table of contents <a name="table-of-contents"></a>
 1. [Arquitectura](#arquitectrua)
-    1.1. [Vista dinamica](#vista-dinamica)
-    1.2. [Vista estatica](#vista-estatica)
-    1.3. [Desciciones](#decisiones-arquitectura)
-    1.4. [Descripción de la descisiones](#descripcion-decisiones-arquitectura)
+    1. [Vista dinamica](#vista-dinamica)
+    2. [Vista estatica](#vista-estatica)
+    3. [Desciciones](#decisiones-arquitectura)
+    4. [Descripción de la descisiones](#descripcion-decisiones-arquitectura)
 2. [Estilo de realización de servicios][estilo-servicios].
 3. [TradeOff][tradeoff].
 4. [Estilo de arquitectura][estilo-arquitectura].
