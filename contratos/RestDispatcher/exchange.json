@@ -1,0 +1,6 @@
+{
+  "main": "/DispatcherREST.raml",
+  "name": "SoapDistpatcher",
+  "classifier": "raml",
+  "tags": []
+}

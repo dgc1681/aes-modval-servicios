@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element name="type" type="xs:string" />
+        <xs:element name="description" type="xs:string" />
+        <xs:element name="properties">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_factura">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="type" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="id_convenio">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="type" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

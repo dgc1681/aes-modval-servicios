@@ -1,0 +1,68 @@
+#%RAML 1.0
+title: DistpatcherREST
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/33a0ee3f-2360-4e27-8e6f-68ed8b2975cb/ # baseUri: http://localhost:8080/servicios/{version}
+mediaType:  application/json
+version: v1
+types: 
+  Factura:
+    type: !include factura.json
+  Paiyment:
+    type: !include payment.json
+/payment:
+   get:
+       description: Retorna la cantidad a pagar
+       body:
+         application/json:
+          type: Factura
+          example: !include example.raml
+         
+       queryParameters:
+         id_factura: 
+          type: integer
+         id_convenio:
+          type: integer
+       responses:
+           200:
+               body:
+                  application/json:
+                    type: Paiyment
+           404:
+               description: La factura no existe
+   post:
+       description: Permite realizar el pago de la factura existente
+       body:
+          application/json:
+            type: Paiyment
+            example: !include GetExample.raml
+       responses:
+           200:
+               body:
+                   application/json:
+                     properties:
+                        idFactura: number
+                        mensajeOK: string
+           404:
+               body:
+                   application/json:
+                     properties:
+                       idFactura: number
+                       mensajeBad: string
+   delete:
+       description: Permite compensar el pago de la factura existente
+       body:
+         application/json:
+           type: Paiyment
+           example: !include GetExample.raml
+       responses:
+           200:
+               body:
+                   application/json:
+                     properties:
+                       idFactura: number
+                       mensajeOK: string
+           404:
+               body:
+                  application/json:
+                    properties:
+                      idFactura: number
+                      mensajeBad: string
