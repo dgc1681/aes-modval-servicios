@@ -9,13 +9,13 @@ Integrantes:
 - Diego Armando Gomez Cuervo 
 - Juan Pablo Reyes Cárdenas
 
-## Table of contents <a name="table-of-contents"></a>
+## Tabla de contenido <a name="table-of-contents"></a>
 
 1. [Estilo de arquitectura](#estilo-arquitectura).
 2. [Patrones y herramientas](#patrones-herramientas).
 3. [Arquitectura](#arquitectrua)
-    1. [Vista dinamica](#vista-dinamica)
-    2. [Vista estatica](#vista-estatica)
+    1. [Vista de proceso](#vista-proceso)
+    2. [Vista estructural](#vista-estructural)
 4. [Justificación de arquitectura](#justificacion-arquitectura).
     1. [Desciciones](#decisiones-arquitectura)
     2. [TradeOff](#tradeoff).
@@ -32,12 +32,12 @@ Integrantes:
 ## 1. Estilo de arquitectura <a name="estilo-arquitectura"></a>
 ## 2. Patrones y herramientas <a name="patrones-herramientas"></a>
 ## 3. Arquitectrua <a name="arquitectrua"></a>
-## 3.1 Vista dinamica <a name="vista-dinamica"></a>
-Descripción del modelo
+## 3.1 Vista de proceso <a name="vista-proceso"></a>
+A continuación, se presenta el dia
 ![alt text][fig1]
 
 Figura 1: Módelo de procesos
-## 3.2 Vista estatica <a name="vista-estatica"></a>
+## 3.2 Vista estructural <a name="vista-estructural"></a>
 Descripción del modelo
 ![alt text][fig2]
 
