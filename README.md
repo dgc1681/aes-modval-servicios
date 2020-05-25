@@ -89,7 +89,7 @@ Una vez determinado el convenio y con esto el tipo de objeto que necesito enviar
 
 Basados en el diagrama de componentes, figura 2 se exponen las siguientes decisiones de arquitectura.
 
-Patrón API Gateway: Adoptar la variación del patrón Api Gateway denominada Backends for frontends por medio de la cual se define una puerta de entrada para cada cliente. Distribuyendo la responsabilidad de cada canal a un único componente.
+Patrón API Gateway: Adoptar la variación del patrón Api Gateway denominada Backends for frontends (figura 4) por medio de la cual se define una puerta de entrada para cada cliente. Distribuyendo la responsabilidad de cada canal a un único componente.
 
 Patrón intermediate routing: Empleamos este patrón con el uso de api gateway como enrutador que conduce la petición del usuario al coreógrafo para dar inicio al proceso junto con un segundo enrutador el cual se encarga de decidir y enviar un objeto según el tipo de mensaje que se requiera manejar para cada convenio.
 
@@ -99,7 +99,11 @@ Dispatcher independientes: Se crearon dos dispatcher, uno que recibe y envía po
 
 Número del convenio: El número de convenio viajará en la estructura de los mensajes que llegaban cualquiera de los dos dispatcher con el objetivo de que el dispatcher sepa a qué servicio debe realizar el pago.
 
-Coreografía: Se seleccionó un esquema de coreografía para la composición de servicios por encima de orquestación, esto por que consideramos que para la composición de los servicios propuestos no se requiere operar bajo un esquema de comunicación  síncrona ya que no consideramos necesario que el usuario obtenga la respuesta inmediata del éxito de la transacción, sino que puede emitir un mensaje de transacción recibida y posteriormente notificar cuando la transacción se haya finalizado. de esta forma generamos una mejor experiencia de usuario basándonos en el atributo de calidad de disponibilidad. 
+Coreografía: Se seleccionó un esquema de coreografía para la composición de servicios por encima de orquestación, esto por que consideramos que para la composición de los servicios propuestos no se requiere operar bajo un esquema de comunicación  síncrona ya que no consideramos necesario que el usuario obtenga la respuesta inmediata del éxito de la transacción, sino que puede emitir un mensaje de transacción recibida y posteriormente notificar cuando la transacción se haya finalizado. de esta forma generamos una mejor experiencia de usuario basándonos en el atributo de calidad de disponibilidad.
+
+![alt text][fig4]
+
+Figura 4: Representación del patron API Gateway, Variación Backends for frontends
 
 ## 4.2. TradeOff de la Arquitectura <a name="tradeoff"></a>
 
@@ -156,3 +160,4 @@ Coreografía: Se seleccionó un esquema de coreografía para la composición de 
 [fig1]: /img/DP_Servicios.png "Módelo de procesos"
 [fig2]: /img/COMPD_Servicios.jpg "Diagrama de compoenentes"
 [fig3]: /img/mer.jpg "Módelo entidad relación"
+[fig4]: /img/bffe.png "API Gateway"
