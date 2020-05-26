@@ -6,7 +6,7 @@ version: v1
 types: 
   Factura:
     type: !include factura.json
-  Paiyment:
+  Payment:
     type: !include payment.json
 /payment:
    get:
@@ -19,14 +19,14 @@ types:
            200:
                body:
                   application/json:
-                    type: Paiyment
+                    type: Payment
            404:
                description: La factura no existe
    post:
        description: Permite realizar el pago de la factura existente
        body:
           application/json:
-            type: Paiyment
+            type: Payment
             example: !include GetExample.raml
        responses:
            200:
@@ -45,7 +45,7 @@ types:
        description: Permite compensar el pago de la factura existente
        body:
          application/json:
-           type: Paiyment
+           type: Payment
            example: !include GetExample.raml
        responses:
            200:

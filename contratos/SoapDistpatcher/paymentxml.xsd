@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xsi:noNamespaceSchemaLocation="schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <type>object</type>
+  <description>payment</description>
+  <properties>
+    <id_factura>
+      <type>integer</type>
+    </id_factura>
+    <id_convenio>
+      <type>integer</type>
+    </id_convenio>
+	<valor>
+      <type>integer</type>
+    </valor>
+  </properties>
+</root>
