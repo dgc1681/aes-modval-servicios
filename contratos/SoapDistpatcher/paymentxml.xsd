@@ -10,7 +10,7 @@
       <type>integer</type>
     </id_convenio>
 	<valor>
-      <type>integer</type>
+      <type>number</type>
     </valor>
   </properties>
 </root>

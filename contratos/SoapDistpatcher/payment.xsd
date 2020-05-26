@@ -3,7 +3,7 @@
   <xs:element name="root">
     <xs:complexType mixed="true">
       <xs:sequence>
-        <xs:element name="type" type="xs:string" />
+        <xs:element name="type" type="xs:object" />
         <xs:element name="description" type="xs:string" />
         <xs:element name="properties">
           <xs:complexType>
