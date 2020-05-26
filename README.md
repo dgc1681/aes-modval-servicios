@@ -161,8 +161,8 @@ Figura 4: Representación del patron API Gateway, Variación Backends for fronte
 [contrato-gestion]: contratos/convenioContrato/Convenio.raml
 [contrato-enrutador]: contratos/Enrutador.raml
 [contrato-transformador]: contratos/Transformador.raml
-[contrato-dispatcher-rest]: contratos/Enrutador.raml
-[contrato-dispatcher-soap]: contratos/Enrutador.raml
+[contrato-dispatcher-rest]: contratos/RestDispatcher/DispatcherREST.raml
+[contrato-dispatcher-soap]: contratos/SoapDistpatcher/soapdistpatcher.raml
 [contrato-orquestador]: contratos/contratoKafka/Kafka.raml
 
 [contract]: https://es.slideshare.net/MohamedZakarya2/soa-principles-1-standarized-service-contract
