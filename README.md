@@ -17,7 +17,7 @@ Integrantes:
     1. [Vista de proceso](#vista-proceso)
     2. [Vista estructural](#vista-estructural)
 4. [Justificación de arquitectura](#justificacion-arquitectura).
-    1. [Desciciones](#decisiones-arquitectura)
+    1. [Descisiones](#decisiones-arquitectura)
     2. [TradeOff](#tradeoff).
 5. [Artefactos](#artefactos).
     1. [API Gateway](#api-gateway)
